@@ -6,6 +6,31 @@
                                 user-scalable=no">
  <script src="../lib/js/jquery.js"></script>
  <script src="../lib/js/two.js"></script>
+ <script>
+ /* http://stackoverflow.com/questions/3605214/
+    ->javascript-add-leading-zeroes-to-date */
+  function dateString(d){
+      function pad(n){return n<10 ? '0'+n : n}
+      return d.getFullYear()      + "" +
+             pad(d.getMonth()+1)  + "" +
+             pad(d.getDate())     + "" +
+             pad(d.getHours())    + "" +
+             pad(d.getMinutes())  + "" +
+             pad(d.getSeconds());
+  }
+ </script>
+ <script>
+  function download(filename,svgdata) {
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:image/svg+xml,'
+                            + encodeURIComponent(svgdata));
+      element.setAttribute('download', filename);
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+  }
+ </script>
  </head>
  <body>
   <div id="content"></div>
@@ -16,7 +41,7 @@
         width: 500,
         height: 500
     }).appendTo(content);
-   
+
     var circle = two.makeCircle(two.width  / 2, 
                                 two.height / 2, 
                                 two.width  / 2, 
@@ -24,9 +49,14 @@
     circle.noStroke().fill = 'orange';
    
     two.update();
-   
+
+
+
     two.renderer.domElement.addEventListener('click', function() {
-       window.open('data:image/svg+xml,' + content.innerHTML);
+     //window.open('data:image/svg+xml,' + content.innerHTML);
+       var svgdata = content.innerHTML;
+       var filename = dateString(new Date()) + ".svg";
+       download(filename,svgdata);
     }, false);
 
   </script>
