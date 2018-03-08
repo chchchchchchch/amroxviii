@@ -68,7 +68,7 @@
       var y = j * canvas.height / LINES;
       context.beginPath();
       context.moveTo(-10,y);
-      for(var x=-10; x<canvas.width+20;x++) {
+      for(var x=-10; x<canvas.width+20;x=x+15) {
         var dx = .5 * canvas.width - x;
         var dy = .5 * canvas.height - y;
         var d = Math.sqrt(dx*dx+dy*dy);
