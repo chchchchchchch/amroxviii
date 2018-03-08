@@ -1,0 +1,34 @@
+<!doctype html>
+<html><head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,
+                                initial-scale=1.0,
+                                user-scalable=no">
+ <script src="../lib/js/jquery.js"></script>
+ <script src="../lib/js/two.js"></script>
+ </head>
+ <body>
+  <div id="content"></div>
+  <script>
+    var content = document.querySelector('#content');
+
+    var two = new Two({
+        width: 500,
+        height: 500
+    }).appendTo(content);
+   
+    var circle = two.makeCircle(two.width  / 2, 
+                                two.height / 2, 
+                                two.width  / 2, 
+                                two.height / 2);
+    circle.noStroke().fill = 'orange';
+   
+    two.update();
+   
+    two.renderer.domElement.addEventListener('click', function() {
+       window.open('data:image/svg+xml,' + content.innerHTML);
+    }, false);
+
+  </script>
+ </body>
+</html>
