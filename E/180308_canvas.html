@@ -1,83 +1,112 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
-  <link rel="stylesheet" media="screen" href="./Beispiel:SELFHTML-Beispiel-Grundlayout.css" />
-  <title>Animation mit canvas</title>
-  <style>
-    canvas {background:white; border:1px solid #333;}  
-  </style>
-  <script>
+<!doctype html>
+<html><head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,
+                                initial-scale=1.0,
+                                user-scalable=no">
+<style>html,body{ width:100%;height:100%;margin:0px; }</style>
+<script src="../lib/js/jquery.js"></script>
+<script src="../lib/js/canvas2svg.js"></script>
+ <script> 
+ /* http://stackoverflow.com/questions/3605214/ 
+    ->javascript-add-leading-zeroes-to-date */ 
+  function dateString(d){ 
+      function pad(n){return n<10 ? '0'+n : n} 
+      return d.getFullYear()      + "" + 
+             pad(d.getMonth()+1)  + "" + 
+             pad(d.getDate())     + "" + 
+             pad(d.getHours())    + "" + 
+             pad(d.getMinutes())  + "" + 
+             pad(d.getSeconds())  + "" + 
+             pad(d.getMilliseconds()); 
+  } 
+ </script> 
+<script>
+  function download(filename,svgdata) { 
+      var element = document.createElement('a'); 
+      element.setAttribute('href', 'data:image/svg+xml,' 
+                            + encodeURIComponent(svgdata)); 
+      element.setAttribute('download',filename); 
+      element.style.display = 'none'; 
+      document.body.appendChild(element); 
+      element.click(); 
+      document.body.removeChild(element); 
+  } 
+</script>
+<script>
+
 'use strict';
 
 (function () {
-   var x =  0;
-   var y = 15;
-   var speed = 3;
 
   function animate() {
-
     requestAnimationFrame(animate);
-
-    x += speed;
-
-    if(x <= 0 || x >= 475){
-        speed = -speed;
-	// y = y + 10; so könnte das Objekt am Ende einer Zeile eine Zeile nach unten gehen
-    }
-
-    draw();
+    draw("canvas");
   }
 
+  function draw(drawwhat) {
 
-  function draw() {
     var canvas  = document.getElementById('canvas');
-    var context = canvas.getContext('2d');
+    var loopDuration = 1;
+    var LINES = 40;
 
-var loopDuration = 1;
-var LINES = 50;
-
-  context.fillStyle = '#fff';
-  context.lineWidth = 1;
-  context.fillRect(0,0,canvas.width, canvas.height);
-  var time = ( .001 * performance.now() ) % loopDuration;
-  for (var j = 0; j < LINES; j++) {
-    var y = j * canvas.height / LINES;
-    context.beginPath();
-    context.moveTo(-10,y);
-    for(var x=-10; x<canvas.width+20;x++) {
-      var dx = .5 * canvas.width - x;
-      var dy = .5 * canvas.height - y;
-      var d = Math.sqrt(dx*dx+dy*dy);
-      var offset = 50. * Math.sin( .00005 * d * d - time * 2 * Math.PI / loopDuration ) * Math.exp( - .00001 * d * d );
-      context.lineTo(x,y+offset);
+    if ( drawwhat == "canvas" ) {
+       //console.log("CANVAS")
+         var context = canvas.getContext('2d');
+         context.canvas.width  = window.innerWidth;
+         context.canvas.height = window.innerHeight;
+    } else if ( drawwhat == "svg" ) {
+         //console.log("SVG")
+         var context = new C2S(window.innerWidth,window.innerHeight);
     }
-    context.lineTo(canvas.width+20,y+2*canvas.height);
-    context.lineTo(-10,y+2*canvas.height);
-    context.closePath();
-    context.fill();
-    context.stroke();
-  }
 
-
+    context.fillStyle = '#fff';
+    context.lineWidth = 1;
+    context.fillRect(0,0,canvas.width, canvas.height);
+    var time = ( .001 * performance.now() ) % loopDuration;
+    for (var j = 0; j < LINES; j++) {
+      var y = j * canvas.height / LINES;
+      context.beginPath();
+      context.moveTo(-10,y);
+      for(var x=-10; x<canvas.width+20;x++) {
+        var dx = .5 * canvas.width - x;
+        var dy = .5 * canvas.height - y;
+        var d = Math.sqrt(dx*dx+dy*dy);
+        var offset = 50. * Math.sin( .00005 * d * d - time * 2 
+                                     * Math.PI / loopDuration  ) 
+                         * Math.exp( - .00001 * d * d );
+        context.lineTo(x,y+offset);
+      }
+      context.lineTo(canvas.width+20,y+2*canvas.height);
+      context.lineTo(-10,y+2*canvas.height);
+      context.closePath();
+      context.fill();
+      context.stroke();
+    }
+    if ( drawwhat == "svg" ) {
+         var svgdata = context.getSerializedSvg();
+         var filename = dateString(new Date())+".svg";
+         download(filename,svgdata);
+    }
   }
-			
-  document.addEventListener(
+	
+   document.addEventListener(
 	"DOMContentLoaded",
 	function () { animate(); }
-  );
+   );
 
-}());  
- 
+  $(window).keypress(function(event){
+     if (event.keyCode == 32) {
+         //console.log("CLICK");
+         draw("svg");
+     }
+  })
+
+  }());  
+
   </script>
 </head>
-  <body>
-  <h1>Animation mit canvas</h1>
- 
-  <main>
-    <canvas id="canvas" width="500" height="300">Beispiel für eine Animation mit Canvas.</canvas>
-  </main>
-  
+<body> 
+  <main><canvas id="canvas"></canvas></main>
 </body>
 </html>
