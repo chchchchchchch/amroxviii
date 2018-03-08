@@ -64,11 +64,12 @@
     context.lineWidth = 1;
     context.fillRect(0,0,canvas.width, canvas.height);
     var time = ( .001 * performance.now() ) % loopDuration;
+
     for (var j = 0; j < LINES; j++) {
       var y = j * canvas.height / LINES;
       context.beginPath();
-      context.moveTo(-10,y);
-      for(var x=-10; x<canvas.width+20;x=x+15) {
+      context.moveTo(0,y);
+      for(var x=15; x<canvas.width+15;x=x+15) {
         var dx = .5 * canvas.width - x;
         var dy = .5 * canvas.height - y;
         var d = Math.sqrt(dx*dx+dy*dy);
@@ -77,12 +78,9 @@
                          * Math.exp( - .00001 * d * d );
         context.lineTo(x,y+offset);
       }
-      context.lineTo(canvas.width+20,y+2*canvas.height);
-      context.lineTo(-10,y+2*canvas.height);
-      context.closePath();
-      context.fill();
       context.stroke();
     }
+
     if ( drawwhat == "svg" ) {
          var svgdata = context.getSerializedSvg();
          var filename = dateString(new Date())+".svg";
