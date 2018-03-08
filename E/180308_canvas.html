@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
+  <link rel="stylesheet" media="screen" href="./Beispiel:SELFHTML-Beispiel-Grundlayout.css" />
+  <title>Animation mit canvas</title>
+  <style>
+    canvas {background:white; border:1px solid #333;}  
+  </style>
+  <script>
+'use strict';
+
+(function () {
+   var x =  0;
+   var y = 15;
+   var speed = 3;
+
+  function animate() {
+
+    requestAnimationFrame(animate);
+
+    x += speed;
+
+    if(x <= 0 || x >= 475){
+        speed = -speed;
+	// y = y + 10; so könnte das Objekt am Ende einer Zeile eine Zeile nach unten gehen
+    }
+
+    draw();
+  }
+
+
+  function draw() {
+    var canvas  = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+
+    context.clearRect(0, 0, 500, 300);
+    context.fillStyle = '#dfac20';
+    context.fillRect(x, y, 20, 20);
+    context.lineWidth = 3;
+    context.strokeStyle = '#3983ab';
+    context.strokeRect(x, y, 20, 20);20
+  }
+			
+  document.addEventListener(
+	"DOMContentLoaded",
+	function () { animate(); }
+  );
+
+}());  
+ 
+  </script>
+</head>
+  <body>
+  <h1>Animation mit canvas</h1>
+ 
+  <main>
+    <canvas id="canvas" width="500" height="300">Beispiel für eine Animation mit Canvas.</canvas>
+  </main>
+  
+</body>
+</html>
