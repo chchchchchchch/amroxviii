@@ -38,27 +38,37 @@
   <script>
     var content = document.querySelector('#content');
 
+  /*
     var two = new Two({
         width: 500,
         height: 500
     }).appendTo(content);
-
     var circle = two.makeCircle(two.width  / 2, 
                                 two.height / 2, 
                                 two.width  / 2, 
                                 two.height / 2);
-    circle.noStroke().fill = 'orange';
-   
+    circle.noStroke().fill = 'orange'; 
     two.update();
+  */
+  
+   var two = new Two({fullscreen:true,autostart:true}).appendTo(content);
 
+   var rect = two.makeRectangle(two.width / 2, two.height / 2, 500 ,500);
 
+   two.bind('update', function() {
+     rect.rotation += 0.01;
+     rect.translation.x = two.width / 2;
+     rect.translation.y = two.height / 2;
+   });
 
+ /* -------------------------------------------------------------- */
     two.renderer.domElement.addEventListener('click', function() {
      //window.open('data:image/svg+xml,' + content.innerHTML);
        var svgdata = content.innerHTML;
        var filename = dateString(new Date()) + ".svg";
        download(filename,svgdata);
     }, false);
+ /* -------------------------------------------------------------- */
 
   </script>
  </body>
