@@ -1,7 +1,7 @@
 #!/bin/bash
 
  TEXT=$*
- FONT=`ls ../lib/fonts/*.flf | shuf -n 1`
+ FONT=`ls ../lib/fonts/figlet/*.flf | shuf -n 1`
  CFONT="OCRA-Medium"
  TMPDIR=.
  TMP=$TMPDIR/${RANDOM}
