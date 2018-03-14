@@ -20,10 +20,11 @@
       exit 0;
  else
       OUTPUT=${OUTDIR}/`date +%Y%m%d%H%M%S`.pdf
-      FTXT=`echo -e "$TEXT"            | #
-            figlet -w 800 -f $FONT     | #
-            sed 's/\\\/\\\\\\\\/g'     | #
-            sed ':a;N;$!ba;s/\n/\\\n/g'`
+      FTXT=`echo -e "$TEXT"             | #
+            figlet -w 800 -f $FONT      | #
+            sed 's/\\\/\\\\\\\\/g'      | #
+            sed ':a;N;$!ba;s/\n/\\\n/g' | #
+            sed 's/ /\\\ /'`              #
       convert -background "#ffffff"  \
               -fill "#000000"        \
               -density 200           \
