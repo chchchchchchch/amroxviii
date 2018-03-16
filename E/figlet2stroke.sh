@@ -32,7 +32,7 @@
               -fill "#000000"        \
               -density 200           \
               -font $CFONT           \
-               label:"$FTXT"         \
+               label:"\n$FTXT\n"     \
               ${TMP}.gif 
       autotrace -color-count 2           \
                 -background-color ffffff \
