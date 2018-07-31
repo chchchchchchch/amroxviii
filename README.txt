@@ -1,8 +1,8 @@
  Graphic Design for AMRO 2018 -> http://www.radical-openness.org
 
- -------------------------------------------------------------
-  Copyright (C) 2016 Christoph Haag
- -------------------------------------------------------------
+ ---------------------------------------------------------------
+ Copyright (C) 2018 Christoph Haag
+ ---------------------------------------------------------------
  
  If not stated otherwise permission is granted to copy,
  distribute and/or modify these documents under the terms
@@ -33,4 +33,6 @@
 
 
  E N J O Y !
+
+ ---------------------------------------------------------------
 
