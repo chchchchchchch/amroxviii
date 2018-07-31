@@ -17,7 +17,10 @@
    inkscape:version="0.48.3.1 r9886"
    width="500"
    height="500"
-   sodipodi:docname="180328_500x500.svg">
+   sodipodi:docname="180328_500x500.svg"
+   inkscape:export-filename="/home/christoph/0000_Projekte/SRV_amroxviii/GIT/_/180328_AMRO_500x500_01.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -26,7 +29,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -53,15 +56,6 @@
          id="stop9934" />
     </linearGradient>
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient9930-8"
-       id="linearGradient5699-7"
-       x1="22.044685"
-       y1="69.664688"
-       x2="950"
-       y2="66.785217"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
        id="linearGradient9930-8">
       <stop
          style="stop-color:#e200d1;stop-opacity:1;"
@@ -87,9 +81,9 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-global="false"
-     inkscape:zoom="0.36031611"
-     inkscape:cx="78.065987"
-     inkscape:cy="17.199294"
+     inkscape:zoom="0.5"
+     inkscape:cx="321.02131"
+     inkscape:cy="341.19913"
      inkscape:current-layer="layer8">
     <sodipodi:guide
        position="0,500"
@@ -115,39 +109,28 @@
      style="display:inline"
      sodipodi:insensitive="true">
     <path
-       style="opacity:0.98999999;color:#000000;fill:url(#linearGradient5699);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:url(#linearGradient5699);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 0,0 500,0 0,500 -500,0 z"
        id="rect3160"
-       inkscape:connector-curvature="0" />
-    <path
-       style="color:#000000;fill:url(#linearGradient5699-7);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="M 0,0 0,500 500,500 500,0 0,0 z M 4,5 5,5 5,6 4,6 4,5 z"
-       id="path4655-0"
        inkscape:connector-curvature="0" />
   </g>
   <g
      style="display:none"
      inkscape:label="XX_BG-BLAU"
      id="g3871"
-     inkscape:groupmode="layer"
-     sodipodi:insensitive="true">
+     inkscape:groupmode="layer">
     <path
        inkscape:connector-curvature="0"
        id="path3873"
        d="m 0,0 500,0 0,500 -500,0 z"
-       style="opacity:0.98999999;color:#000000;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-    <path
-       style="color:#000000;fill:#000080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 0,0 0,500 500,0 0,-500 z m 4,13 1,0 0,1 -1,0 z"
-       id="path4655"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccccccc" />
+       style="color:#000000;fill:#000080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="g4869"
      inkscape:label="BG-BLAU"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <path
        style="opacity:0.98999999;color:#000000;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 0,300 500,90 0,110 -500,0 z"
@@ -3204,7 +3187,7 @@
        stroke-miterlimit="10"
        id="path4745"
        inkscape:connector-curvature="0"
-       style="opacity:0.95;fill:#000080;stroke:none;display:inline"
+       style="fill:#000080;stroke:none;display:inline"
        sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
     <path
        paint-order="fill stroke markers"
@@ -3691,8 +3674,7 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="01-TYPO"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-size:35.4499054px;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;text-align:start;line-height:94.99999881%;letter-spacing:-1.09291327px;word-spacing:-4.86864471px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;display:inline;font-family:Belgika;-inkscape-font-specification:Belgika Semi-Bold"
@@ -3722,32 +3704,32 @@
          dx="1.1826119e-08 -0.65198332">Openness</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:60.18862534px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:89.99999762%;letter-spacing:1.55907536px;word-spacing:-9.26036835px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Bangers;-inkscape-font-specification:Bangers"
-       x="15.493687"
-       y="89.76017"
+       style="font-size:58.84398651px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:89.99999762%;letter-spacing:1.5242449px;word-spacing:-9.05348778px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Bangers;-inkscape-font-specification:Bangers"
+       x="20.732658"
+       y="89.49926"
        id="text6615-3"
        sodipodi:linespacing="89.999998%"><tspan
          sodipodi:role="line"
          id="tspan6617-0"
-         x="15.493687"
-         y="89.76017">unmapping</tspan><tspan
+         x="20.732658"
+         y="89.49926">unmapping</tspan><tspan
          sodipodi:role="line"
-         x="15.493687"
-         y="143.92993"
+         x="20.732658"
+         y="142.45885"
          id="tspan6619-2">infrastruCtUres</tspan></text>
     <text
        sodipodi:linespacing="89.999998%"
        id="text6649-0"
-       y="219.54794"
-       x="480.62695"
-       style="font-size:60.18862534px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:89.99999762%;letter-spacing:1.71822262px;word-spacing:-9.26036835px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Bangers;-inkscape-font-specification:Bangers"
+       y="216.38751"
+       x="475.47464"
+       style="font-size:58.84398651px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:end;text-decoration:none;line-height:89.99999762%;letter-spacing:1.67983675px;word-spacing:-9.05348778px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:end;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Bangers;-inkscape-font-specification:Bangers"
        xml:space="preserve"><tspan
          id="tspan6653-7"
-         y="219.54794"
-         x="482.34515"
+         y="216.38751"
+         x="477.15448"
          sodipodi:role="line">16.5.–19.5.2018</tspan><tspan
-         y="273.71771"
-         x="482.34515"
+         y="269.34711"
+         x="477.15448"
          sodipodi:role="line"
          id="tspan6657-4">Linz, Austria</tspan></text>
     <text
@@ -3800,13 +3782,13 @@
     <text
        sodipodi:linespacing="141%"
        id="text7619"
-       y="469.93292"
-       x="14.254133"
-       style="font-size:27.71440315px;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0.8660751px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Belgika;-inkscape-font-specification:Belgika Semi-Bold"
+       y="482.1788"
+       x="19.520798"
+       style="font-size:27.09525108px;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0.8467266px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Belgika;-inkscape-font-specification:Belgika Semi-Bold"
        xml:space="preserve"><tspan
          id="tspan7621"
-         y="469.93292"
-         x="14.254133"
+         y="482.1788"
+         x="19.520798"
          sodipodi:role="line">www.radical-openness.org</tspan></text>
   </g>
   <g
@@ -3819,6 +3801,7 @@
        style="opacity:0.95;fill:#ffffff"
        d="m -4500,-4500 0,10000 10000,0 0,-10000 z M 0,0 500,0 500,500 0,500 z"
        id="path4112-2"
-       sodipodi:nodetypes="cccccccccc" />
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
